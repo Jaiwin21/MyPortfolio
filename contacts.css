@@ -1,0 +1,159 @@
+/* Eliminating the default margin so that the images can touch the perimetre of the page */
+
+body{
+    margin: 0;
+    cursor: none;
+   
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 1fr 1fr;
+}
+
+/* The spacing and sorting out of the nav bar */
+
+
+ul{
+    list-style-type: none;
+    float: right;
+    display: flex;
+
+}
+
+/* The background */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-image: url(images/foggy\ forest.jpg);
+    height: 100vh;
+  
+}
+
+
+
+/* All the inital editing of the items on the nav bar */
+
+
+nav{
+    
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    margin-right: 13vh;
+    margin-top: 7vh;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+
+/* The hover effect (colour change) and removal of the default underline of the links in HTML */
+
+
+li a:hover{
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+li a{
+    margin-right: 5vh;
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.contact-header{
+    padding: 0;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+form{
+    margin-top: 50px;
+    transition: 4s ease-in-out;
+    justify-self: center;
+    display: grid;
+   
+}
+
+.form-control{
+    width: 600px;
+    background: transparent;
+    border: 1px solid black;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+    grid-column: 2/3;
+
+}
+
+input{
+    height: 40px;
+}
+
+form .submit{
+    background: rgba(83, 175, 21, 0.467);
+    border-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+form .submit:hover{
+    background-color: #00fa68;
+    cursor: pointer;
+}
+
+/* Cursor square effect */
+.cursor{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 30%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease;
+    transition-property: background, transform;
+   
+   
+}
+
+/* makinng sure the cursor is actually inside the div and having a transition effect when hovering over the links in the nav bar */
+.link-alter{
+    transform: scale(2);
+    background: transparent;
+    transform: translate(-1300%, -650%);
+    transition: border ;
+
+}
+
+.media-links{ 
+    grid-column: 1/2;
+    justify-self: center;
+    display: flex;
+    margin-right: 4vh;
+    margin-top: 2vh;
+   
+}
+
+.link{
+    margin: 0 5%;
+    font-size: 2em;
+    color: black;
+    
+}
+
+.link :hover{
+    font-size: 2.2em;
+}
+
+/* Did not need to make a media query for responsiveness on either ipad. it still fit in adequately */

@@ -1,0 +1,180 @@
+/* Eliminating the default margin so that the images can touch the perimetre of the page */
+
+body{
+    background-image: url(images/foggy\ forest.jpg);
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    cursor: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* The spacing and sorting out of the nav bar */
+
+
+ul{
+    list-style-type: none;
+    float: right;
+    display: flex;
+
+}
+
+/* The background */
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container{
+    
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr -1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+  
+}
+
+
+
+/* All the inital editing of the items on the nav bar */
+
+
+nav{
+    
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    margin-right: 13vh;
+    margin-top: 7vh;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    
+    
+}
+
+
+/* The hover effect (colour change) and removal of the default underline of the links in HTML */
+
+
+li a:hover{
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+li a{
+    margin-right: 5vh;
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.selfie{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-right: 10vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    
+  
+}
+
+img{
+    border: 2px solid black;
+    margin-top: 15vh;
+}
+
+.text h1{
+    grid-column: 2/3;
+    margin-left: 10vh;
+    text-decoration: underline;
+    font-size: larger;
+    padding-top: 20px;
+    margin-top: 5vh;
+}
+
+.text p{
+    margin-left: 5vh;
+    margin-top: 4vh;
+    margin-right: 3vh;
+    font-family: 'ABeeZee', sans-serif;
+   
+    
+}
+
+.qualifications {
+    margin-left: 10vh;
+    margin-top: -1vh;
+    font-size: x-small;
+    text-decoration: underline;
+    margin-right: 20vh;
+    margin-bottom: 20vh;
+}
+
+.qualifications p{
+    font-size: large;
+    padding-top: 10px;
+    text-decoration: none;
+    font-family: 'ABeeZee', sans-serif;
+    color: #0f1c2e;
+    
+}
+
+.personal-details h1{
+    font-size: larger;
+    text-decoration: underline;
+    padding-bottom: 8px;  
+        
+}
+ .personal-details p{
+     padding: 3px;
+     font-family: 'ABeeZee', sans-serif;
+ }
+
+
+ /* Cursor square effect */
+.cursor{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 30%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease;
+    transition-property: background, transform;
+   
+   
+}
+
+/* makinng sure the cursor is actually inside the div and having a transition effect when hovering over the links in the nav bar */
+.link-alter{
+    transform: scale(2);
+    background: transparent;
+    transform: translate(-1300%, -650%);
+    transition: border ;
+
+}
+
+/* media query to make it responsove for ipad pros */
+/* Did not need to make a media query for the normal ipad display. it still fit in well */
+@media(max-width: 768px){
+
+    .container nav{
+        float: left;
+        font-size: 10px;
+    }
+
+    
+}
+
